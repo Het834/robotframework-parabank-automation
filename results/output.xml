@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.12.2 on win32)" generated="2025-12-15T12:33:46.483508" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="E:\QA\test">
+<suite id="s1-s1" name="Tests" source="E:\QA\test\tests">
+<suite id="s1-s1-s1" name="Register-Test" source="E:\QA\test\tests\register-test.robot">
+<test id="s1-s1-s1-t1" name="New-regestration" line="9">
+<kw name="launch browser" owner="common-keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-12-15T12:33:46.782921" level="INFO">Opening browser 'chrome' to base url 'https://parabank.parasoft.com/parabank/index.htm'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-12-15T12:33:46.782266" elapsed="5.505701"/>
+</kw>
+<status status="PASS" start="2025-12-15T12:33:46.780920" elapsed="5.507047"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.2s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-12-15T12:33:52.288963" elapsed="0.001001"/>
+</kw>
+<kw name="Clean_db" owner="common-keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-12-15T12:33:52.292968" level="INFO">Clicking element '//div[@id='headerPanel']//a[text()='Admin Page']'.</msg>
+<arg>//div[@id='headerPanel']//a[text()='Admin Page']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-15T12:33:52.291959" elapsed="0.646700"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-12-15T12:33:52.939679" level="INFO">Clicking element '//button[normalize-space(text())='Clean']'.</msg>
+<arg>//button[normalize-space(text())='Clean']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-15T12:33:52.938659" elapsed="0.575910"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-12-15T12:33:53.963570" level="INFO">Current page contains text 'Database Cleaned'.</msg>
+<arg>Database Cleaned</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-12-15T12:33:53.514569" elapsed="0.449001"/>
+</kw>
+<status status="PASS" start="2025-12-15T12:33:52.290973" elapsed="1.672597"/>
+</kw>
+<kw name="Enter_firstname" owner="register">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-12-15T12:33:53.963570" level="INFO">Clicking element 'xpath=//div[@id='loginPanel']//a[text()='Register']'.</msg>
+<arg>xpath=//div[@id='loginPanel']//a[text()='Register']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-15T12:33:53.963570" elapsed="0.563661"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-15T12:33:54.527231" level="INFO">Typing text 'Het' into text field '//*[@id="customer.firstName"]'.</msg>
+<arg>locator=//*[@id="customer.firstName"]</arg>
+<arg>text=${firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-15T12:33:54.527231" elapsed="0.723835"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-12-15T12:33:55.251066" level="INFO">${firstname} = Het</msg>
+<arg>${firstname}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-12-15T12:33:55.251066" elapsed="0.000000"/>
+</kw>
+<arg>Het</arg>
+<status status="PASS" start="2025-12-15T12:33:53.963570" elapsed="1.287496"/>
+</kw>
+<kw name="Enter_lastname" owner="register">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-15T12:33:55.251066" level="INFO">Typing text 'Thumar' into text field '//*[@id="customer.lastName"]'.</msg>
+<arg>//*[@id="customer.lastName"]</arg>
+<arg>text=${lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-15T12:33:55.251066" elapsed="0.739542"/>
+</kw>
+<arg>Thumar</arg>
+<status status="PASS" start="2025-12-15T12:33:55.251066" elapsed="0.739542"/>
+</kw>
+<kw name="Enter_address" owner="register">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-15T12:33:55.990608" level="INFO">Typing text '308 King St N.' into text field '//*[@id="customer.address.street"]'.</msg>
+<arg>//*[@id="customer.address.street"]</arg>
+<arg>text=${address}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-15T12:33:55.990608" elapsed="0.747628"/>
+</kw>
+<arg>308 King St N.</arg>
+<status status="PASS" start="2025-12-15T12:33:55.990608" elapsed="0.747628"/>
+</kw>
+<kw name="Enter_city" owner="register">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-15T12:33:56.738236" level="INFO">Typing text 'Waterloo' into text field '//*[@id="customer.address.city"]'.</msg>
+<arg>//*[@id="customer.address.city"]</arg>
+<arg>text=${city}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-15T12:33:56.738236" elapsed="0.709537"/>
+</kw>
+<arg>Waterloo</arg>
+<status status="PASS" start="2025-12-15T12:33:56.738236" elapsed="0.709537"/>
+</kw>
+<kw name="Enter_state" owner="register">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-15T12:33:57.447773" level="INFO">Typing text 'Ontario' into text field '//*[@id="customer.address.state"]'.</msg>
+<arg>//*[@id="customer.address.state"]</arg>
+<arg>text=${state}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-15T12:33:57.447773" elapsed="0.675215"/>
+</kw>
+<arg>Ontario</arg>
+<status status="PASS" start="2025-12-15T12:33:57.447773" elapsed="0.675215"/>
+</kw>
+<kw name="Enter_zipcode" owner="register">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-15T12:33:58.122988" level="INFO">Typing text 'N3H 3G1' into text field '//*[@id="customer.address.zipCode"]'.</msg>
+<arg>//*[@id="customer.address.zipCode"]</arg>
+<arg>text=${zipcode}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-15T12:33:58.122988" elapsed="0.706427"/>
+</kw>
+<arg>N3H 3G1</arg>
+<status status="PASS" start="2025-12-15T12:33:58.122988" elapsed="0.706427"/>
+</kw>
+<kw name="Enter_phone" owner="register">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-15T12:33:58.835681" level="INFO">Typing text '123456789' into text field '//*[@id="customer.phoneNumber"]'.</msg>
+<arg>//*[@id="customer.phoneNumber"]</arg>
+<arg>text=${phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-15T12:33:58.829415" elapsed="0.715979"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2025-12-15T12:34:00.000381" level="INFO">${phone_value} = 123456789</msg>
+<var>${phone_value}</var>
+<arg>id:customer.phoneNumber</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-15T12:33:59.545394" elapsed="0.454987"/>
+</kw>
+<kw name="Should Match Regexp" owner="BuiltIn">
+<arg>${phone_value}</arg>
+<arg>^[0-9]+$</arg>
+<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
+<status status="PASS" start="2025-12-15T12:34:00.000381" elapsed="0.000000"/>
+</kw>
+<arg>123456789</arg>
+<status status="PASS" start="2025-12-15T12:33:58.829415" elapsed="1.170966"/>
+</kw>
+<kw name="Enter_ssn" owner="register">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-15T12:34:00.002387" level="INFO">Typing text '123457869' into text field '//*[@id="customer.ssn"]'.</msg>
+<arg>//*[@id="customer.ssn"]</arg>
+<arg>text=${ssn}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-15T12:34:00.000381" elapsed="0.679756"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2025-12-15T12:34:01.096243" level="INFO">${ssn} = 123457869</msg>
+<var>${ssn}</var>
+<arg>id:customer.ssn</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-15T12:34:00.680137" elapsed="0.416106"/>
+</kw>
+<kw name="Should Match Regexp" owner="BuiltIn">
+<arg>${ssn}</arg>
+<arg>^[0-9]+$</arg>
+<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
+<status status="PASS" start="2025-12-15T12:34:01.096243" elapsed="0.000000"/>
+</kw>
+<arg>123457869</arg>
+<status status="PASS" start="2025-12-15T12:34:00.000381" elapsed="1.095862"/>
+</kw>
+<kw name="Enter_username" owner="register">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-15T12:34:01.096243" level="INFO">Typing text 'Het834' into text field '//*[@id="customer.username"]'.</msg>
+<arg>//*[@id="customer.username"]</arg>
+<arg>text=${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-15T12:34:01.096243" elapsed="0.678924"/>
+</kw>
+<arg>Het834</arg>
+<status status="PASS" start="2025-12-15T12:34:01.096243" elapsed="0.678924"/>
+</kw>
+<kw name="Enter_password" owner="register">
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-12-15T12:34:01.775167" level="INFO">Typing password into text field '//*[@id="customer.password"]'.</msg>
+<msg time="2025-12-15T12:34:02.203610" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>//*[@id="customer.password"]</arg>
+<arg>password=${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-15T12:34:01.775167" elapsed="0.663214"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-12-15T12:34:02.438381" level="INFO">${password} = Het@123</msg>
+<arg>${password}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-12-15T12:34:02.438381" elapsed="0.000000"/>
+</kw>
+<arg>Het@123</arg>
+<status status="PASS" start="2025-12-15T12:34:01.775167" elapsed="0.663214"/>
+</kw>
+<kw name="Confirm_password" owner="register">
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-12-15T12:34:02.438381" level="INFO">Typing password into text field '//*[@id="repeatedPassword"]'.</msg>
+<msg time="2025-12-15T12:34:02.871792" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>//*[@id="repeatedPassword"]</arg>
+<arg>password=${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-15T12:34:02.438381" elapsed="0.677343"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${password}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-12-15T12:34:03.115724" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-12-15T12:34:02.438381" elapsed="0.677343"/>
+</kw>
+<kw name="Click_register" owner="register">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-12-15T12:34:03.118649" level="INFO">Clicking button '//form[@id='customerForm']//input[@value='Register']'.</msg>
+<arg>//form[@id='customerForm']//input[@value='Register']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-15T12:34:03.118649" elapsed="0.830522"/>
+</kw>
+<status status="PASS" start="2025-12-15T12:34:03.115724" elapsed="0.834054"/>
+</kw>
+<kw name="Confirm_welcome" owner="register">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-12-15T12:34:04.376846" level="INFO">Current page contains text 'Welcome Het'.</msg>
+<arg>Welcome ${firstname}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-12-15T12:34:03.949778" elapsed="0.427068"/>
+</kw>
+<status status="PASS" start="2025-12-15T12:34:03.949778" elapsed="0.427068"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-12-15T12:34:04.376846" elapsed="2.304247"/>
+</kw>
+<status status="PASS" start="2025-12-15T12:33:46.776255" elapsed="19.904838"/>
+</test>
+<status status="PASS" start="2025-12-15T12:33:46.542904" elapsed="20.155419"/>
+</suite>
+<status status="PASS" start="2025-12-15T12:33:46.537605" elapsed="20.171097"/>
+</suite>
+<status status="PASS" start="2025-12-15T12:33:46.487925" elapsed="20.234285"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test" id="s1" pass="1" fail="0" skip="0">Test</stat>
+<stat name="Tests" id="s1-s1" pass="1" fail="0" skip="0">Test.Tests</stat>
+<stat name="Register-Test" id="s1-s1-s1" pass="1" fail="0" skip="0">Test.Tests.Register-Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

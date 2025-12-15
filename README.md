@@ -13,4 +13,4 @@ This project automates functional, regression, and data-driven tests for the Par
 ## 🚀 Setup
 1. Clone the repo:
    ```bash
-   git clone https://github.com/<your-username>/parabank-qa-automation.git
+   git clone https://github.com/Het834/robotframework-parabank-automation
