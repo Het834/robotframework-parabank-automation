@@ -11,3 +11,5 @@ Clean_db
     Click Element    //button[normalize-space(text())='Clean']
     Page Should Contain    Database Cleaned
 
+
+

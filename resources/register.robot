@@ -50,11 +50,13 @@ Enter_ssn
 Enter_username
     [Arguments]    ${username}
     Input Text    //*[@id="customer.username"]    text=${username}
+    Set Global Variable    ${username}
 
 Enter_password
     [Arguments]    ${password}
     Input Password    //*[@id="customer.password"]    password=${password}
-    Set Global Variable    ${password}    
+    Set Global Variable    ${password}  
+
 Confirm_password
     Input Password    //*[@id="repeatedPassword"]    password=${password}
     Log To Console    ${password}

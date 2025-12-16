@@ -8,7 +8,7 @@ Resource    ../resources/register.robot
 
 New-regestration
     launch browser  
-    Set Selenium Speed    0.2s
+    #Set Selenium Speed    0.2s
     Clean_db
     Enter_firstname    Het   
     Enter_lastname    Thumar 
