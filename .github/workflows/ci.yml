@@ -1,15 +1,15 @@
-name: CI - Robot Framework Tests
+name: CI - Robot Framework Tests (Windows)
 
 on:
   push:
     branches: [ "main" ]
 
   schedule:
-    - cron: "0 2 * * *"  
+    - cron: "0 2 * * *"   # Runs every day at 2 AM UTC
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
       - name: Checkout repository
@@ -25,14 +25,14 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Install Chrome and ChromeDriver
+      - name: Install Chrome
         uses: browser-actions/setup-chrome@v1
         with:
           chrome-version: stable
 
       - name: Run Robot Framework tests
         run: |
-          mkdir -p results
+          mkdir results
           robot -d results tests
 
       - name: Upload Robot Framework results
