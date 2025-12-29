@@ -1,252 +1,143 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.12.2 on win32)" generated="2025-12-16T11:42:20.529221" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.12.2 on win32)" generated="2025-12-22T10:09:21.522720" rpa="false" schemaversion="5">
 <suite id="s1" name="Test" source="E:\QA\test">
 <suite id="s1-s1" name="Tests" source="E:\QA\test\tests">
-<suite id="s1-s1-s1" name="Transfer Tests" source="E:\QA\test\tests\transfer_tests.robot">
-<test id="s1-s1-s1-t1" name="Initiate" line="13">
+<suite id="s1-s1-s1" name="Billpay Tests" source="E:\QA\test\tests\billpay_tests.robot">
+<test id="s1-s1-s1-t1" name="Initiate" line="12">
 <kw name="launch browser" owner="common-keywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-12-16T11:42:20.766395" level="INFO">Opening browser 'chrome' to base url 'https://parabank.parasoft.com/parabank/index.htm'.</msg>
+<msg time="2025-12-22T10:09:21.856214" level="INFO">Opening browser 'chrome' to base url 'https://parabank.parasoft.com/parabank/index.htm'.</msg>
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-12-16T11:42:20.766395" elapsed="2.130828"/>
+<status status="PASS" start="2025-12-22T10:09:21.855163" elapsed="1.958990"/>
 </kw>
-<status status="PASS" start="2025-12-16T11:42:20.766395" elapsed="2.130828"/>
+<status status="PASS" start="2025-12-22T10:09:21.854363" elapsed="1.959790"/>
 </kw>
 <kw name="Set Selenium Speed" owner="SeleniumLibrary">
 <arg>0.2s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2025-12-16T11:42:22.900766" elapsed="0.000549"/>
+<status status="PASS" start="2025-12-22T10:09:23.814153" elapsed="0.000000"/>
 </kw>
 <kw name="Enter_lusername" owner="login_keywords">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-16T11:42:22.902320" level="INFO">Typing text 'Het834' into text field '//div[@id="loginPanel"]//input[@name="username"]'.</msg>
-<arg>//div[@id="loginPanel"]//input[@name="username"]</arg>
+<msg time="2025-12-22T10:09:23.814153" level="FAIL">Variable '${username}' not found.</msg>
 <arg>${username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-16T11:42:22.902320" elapsed="0.676768"/>
-</kw>
-<arg>Het834</arg>
-<status status="PASS" start="2025-12-16T11:42:22.901315" elapsed="0.677773"/>
+<status status="FAIL" start="2025-12-22T10:09:23.814153" elapsed="0.014073">Variable '${username}' not found.</status>
 </kw>
 <kw name="Enter_lpassword" owner="login_keywords">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-16T11:42:23.579088" level="INFO">Typing text 'Het@123' into text field '//div[@id="loginPanel"]//input[@name="password"]'.</msg>
-<arg>//div[@id="loginPanel"]//input[@name="password"]</arg>
 <arg>${password}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-16T11:42:23.579088" elapsed="0.680185"/>
-</kw>
-<arg>Het@123</arg>
-<status status="PASS" start="2025-12-16T11:42:23.579088" elapsed="0.680185"/>
+<status status="NOT RUN" start="2025-12-22T10:09:23.829230" elapsed="0.000000"/>
 </kw>
 <kw name="Click_login" owner="login_keywords">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-12-16T11:42:24.259273" level="INFO">Clicking button '//*[@id="loginPanel"]/form/div[3]/input'.</msg>
-<arg>//*[@id="loginPanel"]/form/div[3]/input</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-16T11:42:24.259273" elapsed="0.662279"/>
-</kw>
-<status status="PASS" start="2025-12-16T11:42:24.259273" elapsed="0.662279"/>
+<status status="NOT RUN" start="2025-12-22T10:09:23.829230" elapsed="0.000000"/>
 </kw>
 <kw name="Confirm_login" owner="login_keywords">
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-12-16T11:42:25.526396" level="INFO">Current page contains text 'Overview'.</msg>
-<arg>Overview</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-12-16T11:42:24.923511" elapsed="0.602885"/>
+<status status="NOT RUN" start="2025-12-22T10:09:23.831278" elapsed="0.001017"/>
 </kw>
-<status status="PASS" start="2025-12-16T11:42:24.922449" elapsed="0.603947"/>
-</kw>
-<status status="PASS" start="2025-12-16T11:42:20.766395" elapsed="4.760001"/>
+<status status="FAIL" start="2025-12-22T10:09:21.836808" elapsed="1.996480">Variable '${username}' not found.</status>
 </test>
-<test id="s1-s1-s1-t2" name="Initiate_fundtransfer" line="21">
-<kw name="Initiate_transfer" owner="transfer_keywords">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-12-16T11:42:25.529175" level="INFO">Clicking element '//div[@id="leftPanel"]//a[contains(text(),"Transfer Funds")]'.</msg>
-<arg>//div[@id="leftPanel"]//a[contains(text(),"Transfer Funds")]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-16T11:42:25.529175" elapsed="0.581526"/>
-</kw>
-<status status="PASS" start="2025-12-16T11:42:25.529175" elapsed="0.581526"/>
-</kw>
-<kw name="Verify_transferpage" owner="transfer_keywords">
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-12-16T11:42:26.533232" level="INFO">Current page contains text 'Transfer Funds'.</msg>
-<arg>Transfer Funds</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-12-16T11:42:26.110701" elapsed="0.422531"/>
-</kw>
-<status status="PASS" start="2025-12-16T11:42:26.110701" elapsed="0.422531"/>
-</kw>
-<kw name="Verify_payee" owner="transfer_keywords">
-<kw name="Get List Items" owner="SeleniumLibrary">
-<msg time="2025-12-16T11:42:27.854564" level="INFO">${items} = ['13455']</msg>
-<var>${items}</var>
-<arg>//*[@id="toAccountId"]</arg>
-<doc>Returns all labels or values of selection list ``locator``.</doc>
-<status status="PASS" start="2025-12-16T11:42:26.533232" elapsed="1.321332"/>
-</kw>
-<kw name="Get Length" owner="BuiltIn">
-<msg time="2025-12-16T11:42:27.854564" level="INFO">Length is 1.</msg>
-<msg time="2025-12-16T11:42:27.854564" level="INFO">${count} = 1</msg>
-<var>${count}</var>
-<arg>${items}</arg>
-<doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="PASS" start="2025-12-16T11:42:27.854564" elapsed="0.000000"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>Dropdown contains ${count} accounts</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-12-16T11:42:27.854564" elapsed="0.009136"/>
-</kw>
-<if>
-<branch type="IF" condition="${count} == 1">
-<kw name="Create_newacc" owner="create">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-12-16T11:42:27.863700" level="INFO">Clicking element '//*[@id="leftPanel"]/ul/li[1]/a'.</msg>
-<arg>//*[@id="leftPanel"]/ul/li[1]/a</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-16T11:42:27.863700" elapsed="0.660985"/>
-</kw>
-<status status="PASS" start="2025-12-16T11:42:27.863700" elapsed="0.660985"/>
-</kw>
-<kw name="Create_acc" owner="create">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-12-16T11:42:28.524685" level="INFO">Clicking element '//input[@class="button" and @value="Open New Account"]'.</msg>
-<arg>//input[@class="button" and @value="Open New Account"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-16T11:42:28.524685" elapsed="0.540676"/>
-</kw>
-<status status="PASS" start="2025-12-16T11:42:28.524685" elapsed="0.540676"/>
-</kw>
-<kw name="Account_created" owner="create">
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-12-16T11:42:29.515573" level="INFO">Current page contains text 'Account Opened!'.</msg>
-<arg>Account Opened!</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-12-16T11:42:29.067145" elapsed="0.448428"/>
-</kw>
-<status status="PASS" start="2025-12-16T11:42:29.067145" elapsed="0.448428"/>
-</kw>
-<kw name="Get_account" owner="create">
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-12-16T11:42:29.986080" level="INFO">${account_id} = 13566</msg>
-<var>${account_id}</var>
-<arg>id:newAccountId</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-16T11:42:29.515573" elapsed="0.470507"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${account_id}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-12-16T11:42:29.988103" elapsed="0.000000"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2025-12-16T11:42:29.988103" level="INFO">${account_id} = 13566</msg>
-<arg>${account_id}</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2025-12-16T11:42:29.988103" elapsed="0.005115"/>
-</kw>
-<status status="PASS" start="2025-12-16T11:42:29.515573" elapsed="0.477645"/>
-</kw>
-<kw name="Initiate_transfer" owner="transfer_keywords">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-12-16T11:42:29.993218" level="INFO">Clicking element '//div[@id="leftPanel"]//a[contains(text(),"Transfer Funds")]'.</msg>
-<arg>//div[@id="leftPanel"]//a[contains(text(),"Transfer Funds")]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-16T11:42:29.993218" elapsed="0.631547"/>
-</kw>
-<status status="PASS" start="2025-12-16T11:42:29.993218" elapsed="0.631547"/>
-</kw>
-<kw name="Get List Items" owner="SeleniumLibrary">
-<msg time="2025-12-16T11:42:32.127960" level="INFO">${items} = ['13455', '13566']</msg>
-<var>${items}</var>
-<arg>//*[@id="toAccountId"]</arg>
-<doc>Returns all labels or values of selection list ``locator``.</doc>
-<status status="PASS" start="2025-12-16T11:42:30.624765" elapsed="1.503195"/>
-</kw>
-<kw name="Get Length" owner="BuiltIn">
-<msg time="2025-12-16T11:42:32.131211" level="INFO">Length is 2.</msg>
-<msg time="2025-12-16T11:42:32.131211" level="INFO">${count} = 2</msg>
-<var>${count}</var>
-<arg>${items}</arg>
-<doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="PASS" start="2025-12-16T11:42:32.127960" elapsed="0.003251"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>Dropdown now contains ${count} accounts</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-12-16T11:42:32.131211" elapsed="0.000000"/>
-</kw>
-<status status="PASS" start="2025-12-16T11:42:27.863700" elapsed="4.267511"/>
-</branch>
-<status status="PASS" start="2025-12-16T11:42:27.863700" elapsed="4.267511"/>
-</if>
-<status status="PASS" start="2025-12-16T11:42:26.533232" elapsed="5.597979"/>
-</kw>
-<kw name="Select_payee" owner="transfer_keywords">
-<kw name="Select From List By Label" owner="SeleniumLibrary">
-<msg time="2025-12-16T11:42:32.139457" level="INFO">Selecting options from selection list '//*[@id="toAccountId"]' by label 13566.</msg>
-<arg>//*[@id="toAccountId"]</arg>
-<arg>${account_id}</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<status status="PASS" start="2025-12-16T11:42:32.139457" elapsed="2.394171"/>
-</kw>
-<status status="PASS" start="2025-12-16T11:42:32.139457" elapsed="2.394171"/>
-</kw>
-<kw name="Enter_amount" owner="transfer_keywords">
+<test id="s1-s1-s1-t2" name="Initiate_billpayment" line="20">
+<kw name="fill bill pay details" owner="billpay_keywords">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-16T11:42:34.533628" level="INFO">Typing text '15' into text field '//*[@id="amount"]'.</msg>
-<arg>//*[@id="amount"]</arg>
+<msg time="2025-12-22T10:09:23.866731" level="INFO">Typing text 'Electricity Co' into text field 'id=payee.name'.</msg>
+<msg time="2025-12-22T10:09:24.451801" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-26.png"&gt;&lt;img src="selenium-screenshot-26.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-12-22T10:09:24.451801" level="FAIL">Element with locator 'id=payee.name' not found.</msg>
+<arg>id=payee.name</arg>
+<arg>${payee_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2025-12-22T10:09:23.866731" elapsed="0.585070">Element with locator 'id=payee.name' not found.</status>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=payee.address.street</arg>
+<arg>${address}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-12-22T10:09:24.462479" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=payee.address.city</arg>
+<arg>${city}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-12-22T10:09:24.462479" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=payee.address.state</arg>
+<arg>${state}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-12-22T10:09:24.462479" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=payee.address.zipCode</arg>
+<arg>${zip}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-12-22T10:09:24.462479" elapsed="0.002007"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=payee.phoneNumber</arg>
+<arg>${phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-12-22T10:09:24.464486" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=payee.accountNumber</arg>
+<arg>${account}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-12-22T10:09:24.464486" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=verifyAccount</arg>
+<arg>${verify_account}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-12-22T10:09:24.464486" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=amount</arg>
 <arg>${amount}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-16T11:42:34.533628" elapsed="0.677905"/>
+<status status="NOT RUN" start="2025-12-22T10:09:24.464486" elapsed="0.000000"/>
 </kw>
-<arg>15</arg>
-<status status="PASS" start="2025-12-16T11:42:34.533628" elapsed="0.677905"/>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<arg>id=fromAccountId</arg>
+<arg>${from_account}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="NOT RUN" start="2025-12-22T10:09:24.466493" elapsed="0.000000"/>
 </kw>
-<kw name="Complete_transfer" owner="transfer_keywords">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-12-16T11:42:35.211533" level="INFO">Clicking button '//form[@id="transferForm"]//input[@value="Transfer"]'.</msg>
-<arg>//form[@id="transferForm"]//input[@value="Transfer"]</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-16T11:42:35.211533" elapsed="0.662972"/>
+<arg>Electricity Co</arg>
+<arg>123 Main Street</arg>
+<arg>Toronto</arg>
+<arg>ON</arg>
+<arg>M1A1A1</arg>
+<arg>9876543210</arg>
+<arg>456789</arg>
+<arg>456789</arg>
+<arg>50</arg>
+<arg>12345</arg>
+<status status="FAIL" start="2025-12-22T10:09:23.866731" elapsed="0.599762">Element with locator 'id=payee.name' not found.</status>
 </kw>
-<status status="PASS" start="2025-12-16T11:42:35.211533" elapsed="0.662972"/>
-</kw>
-<kw name="Confirm_transfer" owner="transfer_keywords">
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-12-16T11:42:36.290664" level="INFO">Current page contains text 'Transfer Complete!'.</msg>
-<arg>Transfer Complete!</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-12-16T11:42:35.874505" elapsed="0.416159"/>
-</kw>
-<status status="PASS" start="2025-12-16T11:42:35.874505" elapsed="0.416159"/>
+<kw name="submit bill payment" owner="billpay_keywords">
+<status status="NOT RUN" start="2025-12-22T10:09:24.466493" elapsed="0.000000"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-12-16T11:42:36.290664" elapsed="2.338029"/>
+<status status="NOT RUN" start="2025-12-22T10:09:24.466493" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2025-12-16T11:42:25.529175" elapsed="13.099518"/>
+<status status="FAIL" start="2025-12-22T10:09:23.858235" elapsed="0.608258">Element with locator 'id=payee.name' not found.</status>
 </test>
-<status status="PASS" start="2025-12-16T11:42:20.577854" elapsed="18.054045"/>
+<status status="FAIL" start="2025-12-22T10:09:21.580322" elapsed="2.898061"/>
 </suite>
-<status status="PASS" start="2025-12-16T11:42:20.572499" elapsed="18.068299"/>
+<status status="FAIL" start="2025-12-22T10:09:21.576199" elapsed="2.912561"/>
 </suite>
-<status status="PASS" start="2025-12-16T11:42:20.534840" elapsed="18.108852"/>
+<status status="FAIL" start="2025-12-22T10:09:21.522720" elapsed="2.975339"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Test" id="s1" pass="2" fail="0" skip="0">Test</stat>
-<stat name="Tests" id="s1-s1" pass="2" fail="0" skip="0">Test.Tests</stat>
-<stat name="Transfer Tests" id="s1-s1-s1" pass="2" fail="0" skip="0">Test.Tests.Transfer Tests</stat>
+<stat name="Test" id="s1" pass="0" fail="2" skip="0">Test</stat>
+<stat name="Tests" id="s1-s1" pass="0" fail="2" skip="0">Test.Tests</stat>
+<stat name="Billpay Tests" id="s1-s1-s1" pass="0" fail="2" skip="0">Test.Tests.Billpay Tests</stat>
 </suite>
 </statistics>
 <errors>

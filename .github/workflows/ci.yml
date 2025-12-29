@@ -1,0 +1,42 @@
+name: CI - Robot Framework Tests
+
+on:
+  push:
+    branches: [ "main" ]
+
+  schedule:
+    - cron: "0 2 * * *"  
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Install Chrome and ChromeDriver
+        uses: browser-actions/setup-chrome@v1
+        with:
+          chrome-version: stable
+
+      - name: Run Robot Framework tests
+        run: |
+          mkdir -p results
+          robot -d results tests
+
+      - name: Upload Robot Framework results
+        uses: actions/upload-artifact@v4
+        with:
+          name: robot-results
+          path: results

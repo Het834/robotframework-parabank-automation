@@ -10,11 +10,11 @@ Resource    ../resources/register.robot
 Enter_lusername
     [Arguments]    ${username}
     Input Text    //div[@id="loginPanel"]//input[@name="username"]    ${username}
-
+    Set Global Variable    ${username}
 Enter_lpassword
     [Arguments]    ${password}
     Input Text    //div[@id="loginPanel"]//input[@name="password"]    ${password}
-
+    Set Global Variable    ${password}
 Click_login    
     Click Button    //*[@id="loginPanel"]/form/div[3]/input    
 

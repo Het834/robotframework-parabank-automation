@@ -23,5 +23,5 @@ New-regestration
     Confirm_password
     Click_register
     Confirm_welcome
-    Close Browser  
+    #Close Browser  
 
